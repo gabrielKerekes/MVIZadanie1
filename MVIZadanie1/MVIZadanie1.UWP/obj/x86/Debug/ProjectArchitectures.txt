@@ -1,0 +1,2 @@
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\MVIZadanie1.UWP.csproj;x86
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\MVIZadanie1.csproj;neutral
