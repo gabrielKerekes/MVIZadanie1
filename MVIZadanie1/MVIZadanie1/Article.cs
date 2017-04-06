@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace MVIZadanie1
 {
@@ -14,13 +15,22 @@ namespace MVIZadanie1
         public string Extract { get; set; }
         public string Link { get; set; }
         public int CategoryId { get; set; }
+        public string ImageUrl { get; set; }
+        public ImageSource ImageSource { get; set; }
 
-        public Article(string title, string extract, string link, int categoryId)
+        public Article(string title, string extract, string link, int categoryId, string imageUrl)
         {
             Title = title;
             Extract = extract;
             Link = link;
             CategoryId = categoryId;
+            ImageUrl = imageUrl;
+
+            ImageSource = new UriImageSource
+            {
+                CachingEnabled = true,
+                Uri = new Uri(ImageUrl),
+            };
         }
 
         private static string JsonContentToExtract(string jsonContent)
@@ -55,8 +65,11 @@ namespace MVIZadanie1
 
                 var categories = JsonConvert.DeserializeObject<string[]>(objectDict["categories"].ToString());
                 var category = int.Parse(categories[0]);
-                
-                yield return new Article(title, extract, link, category);
+
+                // todo: get real image
+                var imageUrl = "http://mechatronika.cool/noviny/wp-content/uploads/2017/03/Nokia-3310-7-768x432.jpg";
+
+                yield return new Article(title, extract, link, category, imageUrl);
             }
         }
     }

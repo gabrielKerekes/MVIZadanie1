@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-02T16:38:45.287</Modified>
+      <Modified>2017-04-06T08:55:37.840</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debug\MVIZadanie1.UWP.exe">
       <PackagePath>entrypoint\MVIZadanie1.UWP.exe</PackagePath>
-      <Modified>2017-04-02T16:38:44.493</Modified>
+      <Modified>2017-04-06T08:55:37.056</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GabrielK\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -466,7 +466,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\MVIZadanie1.dll">
       <PackagePath>MVIZadanie1.dll</PackagePath>
-      <Modified>2017-04-02T16:38:42.871</Modified>
+      <Modified>2017-04-06T08:55:34.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -533,7 +533,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debug\Core\MVIZadanie1.UWP.exe">
       <PackagePath>MVIZadanie1.UWP.exe</PackagePath>
-      <Modified>2017-04-02T16:38:45.268</Modified>
+      <Modified>2017-04-06T08:55:37.823</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
