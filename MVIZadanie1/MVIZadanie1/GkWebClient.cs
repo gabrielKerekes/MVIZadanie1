@@ -15,6 +15,11 @@ namespace MVIZadanie1
             return client.GetStringAsync(url).Result;
         }
 
+        public static string GetFileContent(string url)
+        {
+            return DoRequest(url);
+        }
+
         //public static string DownloadImageIfNotCached(string url)
         //{
         //    var client = new WebClient();

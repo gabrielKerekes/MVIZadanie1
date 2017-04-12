@@ -9,6 +9,10 @@ using Xamarin.Forms;
 
 namespace MVIZadanie1
 {
+    // todo: kategorie
+    // todo: moznost filtrovat podla kategorie
+    // todo: hore vzdy najnovsie clanky
+    // todo: ak je v clanku youtube video tak play alebo presmerovat to browser
     public class Article
     {
         public string Title { get; set; }

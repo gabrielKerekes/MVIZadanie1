@@ -5,37 +5,34 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using MVIZadanie1;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace MVIZadanie1
 {
-    public partial class MainPage : ContentPage
+    // todo: sablony 
+    // todo: otvaracie hodiny
+    // todo: zdroje informacii
+     //todo: kalendar s udalostami
+     //todo: zoznam softveru
+     //todo: harmonogram studia
+     //todo: rozvrh skusok
+     //todo: splash screen
+     
+    // todo: vycistit stringt od &#8211 alebo to prerobit na pomlcku alebo co
+    public partial class MainPage : TabbedPage
     {
-        private ObservableCollection<Article> articles;
-
+        //todo: move article list view to another activity maybe
         public MainPage()
         {
             InitializeComponent();
-
-            articles = new ObservableCollection<Article>();
-
-            foreach (var article in Article.GetArticlesFromWeb())
-            {
-                articles.Add(article);
-            }
-
-            ArticleListView.ItemsSource = articles;
-        }
-
-        private void ArticleListView_OnRefreshing(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ArticleListView_OnItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            
+            Children.Add(new ArticlesPage());
+            Children.Add(new SemesterHarmonogramPage());
+            Children.Add(new FinalsSchedulePage());
+            Children.Add(new SoftwarePage());
+            Children.Add(new OpeningHoursPage());
+            Children.Add(new TemplatesPage());
         }
     }
 }

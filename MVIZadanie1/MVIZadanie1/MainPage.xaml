@@ -1,30 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage 
+<TabbedPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MVIZadanie1.MainPage">
-    <StackLayout 
-        Orientation="Vertical" 
-        HorizontalOptions="FillAndExpand">
-        <ListView 
-            x:Name="ArticleListView"
-            IsPullToRefreshEnabled="True" 
-            Refreshing="ArticleListView_OnRefreshing"
-            ItemTapped="ArticleListView_OnItemTapped"
-            RowHeight="120">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="10">
-                            <Image Aspect="AspectFit" HeightRequest ="120" WidthRequest="120" Source="{Binding ImageSource}" />
-                            <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical">
-                                <Label Text="{Binding Title}" FontSize="18" />
-                                <Label Text="{Binding Extract}" FontSize="14" />
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
-</ContentPage>
+</TabbedPage>

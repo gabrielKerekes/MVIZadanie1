@@ -21,3 +21,12 @@ C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\System
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\System.Xml.xml
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\Newtonsoft.Json.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.SemesterHarmonogramPage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.FinalsSchedulePage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.ArticlesPage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.SingleArticlePage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\HtmlAgilityPack.dll
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.SoftwarePage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.OpeningHoursPage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.TemplatesPage.xaml.g.cs
