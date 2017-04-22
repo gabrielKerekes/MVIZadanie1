@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MVIZadanie1.Pages.EventPage">
+    <StackLayout
+        x:Name="MainStackLayout"
+        Orientation="Vertical"
+        HorizontalOptions="FillAndExpand">
+        <ListView
+            x:Name="EventListView"
+            IsPullToRefreshEnabled="True"
+            Refreshing="EventListView_OnRefreshing"
+            ItemTapped="EventListView_OnItemTapped"
+            RowHeight="160"
+            SeparatorColor="Black">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical">
+                            <Label Text="{Binding Name}" FontSize="18" />
+                            <Label Text="{Binding Place}" FontSize="14" />
+                            <Label Text="{Binding StartDateString}" VerticalOptions="End" FontSize="12" TextColor="Gray"/>
+                            <Label Text="{Binding EndDateString}" VerticalOptions="End" FontSize="12" TextColor="Gray"/>
+                            <Label Text="{Binding Description}" FontSize="14" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

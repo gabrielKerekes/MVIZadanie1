@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net.Http;
 
 namespace MVIZadanie1
 {
+    // todo: rename
     public class GkWebClient
     {
+        // todo: exception handling
         public static string DoRequest(string url)
         {
             var client = new HttpClient();
@@ -19,10 +16,5 @@ namespace MVIZadanie1
         {
             return DoRequest(url);
         }
-
-        //public static string DownloadImageIfNotCached(string url)
-        //{
-        //    var client = new WebClient();
-        //}
     }
 }

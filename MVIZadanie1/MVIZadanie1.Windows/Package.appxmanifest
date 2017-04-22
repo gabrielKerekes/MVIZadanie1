@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
 
-  <Identity Name="1fc8d132-f2fe-4c9a-86f4-ed11217a991b"
+  <Identity Title="1fc8d132-f2fe-4c9a-86f4-ed11217a991b"
             Publisher="CN=GabrielK"
             Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>MVIZadanie1.Windows</DisplayName>
-    <PublisherDisplayName>GabrielK</PublisherDisplayName>
+    <DisplayTitle>MVIZadanie1.Windows</DisplayTitle>
+    <PublisherDisplayTitle>GabrielK</PublisherDisplayTitle>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -22,10 +22,10 @@
 
   <Applications>
     <Application Id="App"
-        Executable="$targetnametoken$.exe"
+        Executable="$targettitletoken$.exe"
         EntryPoint="MVIZadanie1.Windows.App">
       <m2:VisualElements
-          DisplayName="MVIZadanie1.Windows"
+          DisplayTitle="MVIZadanie1.Windows"
           Square150x150Logo="Assets\Logo.png"
           Square30x30Logo="Assets\SmallLogo.png"
           Description="MVIZadanie1.Windows"
@@ -36,6 +36,6 @@
     </Application>
   </Applications>
   <Capabilities>
-    <Capability Name="internetClient" />
+    <Capability Title="internetClient" />
   </Capabilities>
 </Package>

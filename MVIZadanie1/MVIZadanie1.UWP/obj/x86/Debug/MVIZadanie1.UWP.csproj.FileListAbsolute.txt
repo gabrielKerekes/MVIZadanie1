@@ -202,3 +202,4 @@ C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debu
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debug\Newtonsoft.Json.xml
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debug\HtmlAgilityPack.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debug\HtmlAgilityPack.pdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.UWP\bin\x86\Debug\MVIZadanie1.dll.config

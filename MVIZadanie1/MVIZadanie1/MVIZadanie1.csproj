@@ -36,40 +36,52 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Article.cs" />
-    <Compile Include="ArticlesPage.xaml.cs">
+    <Compile Include="ButtonGroupView.cs" />
+    <Compile Include="Elements\LinkLabel.cs" />
+    <Compile Include="IReminderCreator.cs" />
+    <Compile Include="Model\Article.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\Templates\TemplateDepartment.cs" />
+    <Compile Include="Pages\ArticlesPage.xaml.cs">
       <DependentUpon>ArticlesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FinalsSchedule.cs" />
-    <Compile Include="FinalsSchedulePage.xaml.cs">
+    <Compile Include="Model\FinalsSchedule.cs" />
+    <Compile Include="Pages\EventPage.xaml.cs">
+      <DependentUpon>EventPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FinalsSchedulePage.xaml.cs">
       <DependentUpon>FinalsSchedulePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="GkWebClient.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OpeningHours.cs" />
-    <Compile Include="OpeningHoursPage.xaml.cs">
+    <Compile Include="Model\OpeningHoursObject.cs" />
+    <Compile Include="Pages\OpeningHoursPage.xaml.cs">
       <DependentUpon>OpeningHoursPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SplashScreenPage.xaml.cs">
+      <DependentUpon>SplashScreenPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SemesterHarmonogram.cs" />
-    <Compile Include="SemesterHarmonogramPage.xaml.cs">
+    <Compile Include="Model\SemesterHarmonogram.cs" />
+    <Compile Include="Pages\SemesterHarmonogramPage.xaml.cs">
       <DependentUpon>SemesterHarmonogramPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SingleArticlePage.xaml.cs">
+    <Compile Include="Pages\SingleArticlePage.xaml.cs">
       <DependentUpon>SingleArticlePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Software.cs" />
-    <Compile Include="SoftwarePage.xaml.cs">
+    <Compile Include="Model\Software.cs" />
+    <Compile Include="Pages\SoftwarePage.xaml.cs">
       <DependentUpon>SoftwarePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Template.cs" />
-    <Compile Include="TemplatesPage.xaml.cs">
+    <Compile Include="Model\Templates\Template.cs" />
+    <Compile Include="Pages\TemplatesPage.xaml.cs">
       <DependentUpon>TemplatesPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -99,49 +111,65 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
+    <EmbeddedResource Include="Pages\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SemesterHarmonogramPage.xaml">
+    <EmbeddedResource Include="Pages\SemesterHarmonogramPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FinalsSchedulePage.xaml">
+    <EmbeddedResource Include="Pages\FinalsSchedulePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ArticlesPage.xaml">
+    <EmbeddedResource Include="Pages\ArticlesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SingleArticlePage.xaml">
+    <EmbeddedResource Include="Pages\SingleArticlePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SoftwarePage.xaml">
+    <EmbeddedResource Include="Pages\SoftwarePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="OpeningHoursPage.xaml">
+    <EmbeddedResource Include="Pages\OpeningHoursPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TemplatesPage.xaml">
+    <EmbeddedResource Include="Pages\TemplatesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\SplashScreenPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\feiLogo.png" />
+    <EmbeddedResource Include="Images\mechatronikaLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\EventPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

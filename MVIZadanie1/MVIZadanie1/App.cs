@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using MVIZadanie1.Pages;
 using Xamarin.Forms;
 
 namespace MVIZadanie1
@@ -11,7 +7,7 @@ namespace MVIZadanie1
     {
         public App()
         {
-            MainPage = new MainPage();
+            MainPage = new SplashScreenPage();
         }
 
         protected override void OnStart()

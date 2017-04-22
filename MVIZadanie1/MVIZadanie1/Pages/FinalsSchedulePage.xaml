@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MVIZadanie1.Pages.FinalsSchedulePage">
+    <StackLayout
+        Orientation="Vertical"
+        HorizontalOptions="FillAndExpand">
+        <SearchBar x:Name="FinalsSearchBar" Placeholder="Search..." TextChanged="FinalsSearchBar_OnTextChanged"/>
+        <ListView
+            x:Name="FinalsScheduleListView"
+            IsPullToRefreshEnabled="True"
+            ItemTapped="FinalsScheduleListView_OnItemTapped"
+            RowHeight="120">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="10">
+                            <Label Text="{Binding SubjectAndCodeAndDepartment}" FontSize="18" />
+                            <Label Text="{Binding FirstTry}" FontSize="14" />
+                            <Label Text="{Binding SecondTry}" FontSize="14" />
+                            <!--</StackLayout>-->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

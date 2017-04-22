@@ -77,5 +77,11 @@ C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\bin\Debug\
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\bin\Debug\Mono.CSharp.dll.mdb
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\bin\Debug\HtmlAgilityPack.dll
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\bin\Debug\HtmlAgilityPack.dll.mdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\HtmlAgilityPack.dll.mdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\bin\Debug\System.Runtime.Serialization.Primitives.dll.mdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll.mdb
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\MVIZadanie1.Droid.dll.mdb
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\bin\Debug\MVIZadanie1.Droid.dll.mdb
