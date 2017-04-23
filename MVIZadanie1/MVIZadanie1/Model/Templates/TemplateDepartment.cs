@@ -1,25 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using HtmlAgilityPack;
 
 namespace MVIZadanie1.Model.Templates
 {
     public class TemplateDepartment
     {
-        public const string TemplatesUrl = "http://mechatronika.cool/noviny/sablony/";
+        private const string TemplatesUrl = "http://mechatronika.cool/noviny/sablony/";
 
         public string Name { get; set; }
         public List<Template> Templates { get; set; }
 
         public static List<TemplateDepartment> GetTemplatesFromWeb()
         {
-            var htmlString = GkWebClient.DoRequest(TemplatesUrl);
+            var entryContentDiv = MviWebClient.GetPageEntryContent(TemplatesUrl);
+            if (entryContentDiv == null)
+                return new List<TemplateDepartment>();
 
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(htmlString);
-
-            var entryContentDiv = htmlDocument.DocumentNode.Descendants("div").First(d => d.Attributes.Contains("class") && d.Attributes["class"].Value.Contains("entry-content"));
             var entryContentParagraphs = entryContentDiv.Descendants("p").Skip(1);
 
             var templateDepartments = new List<TemplateDepartment>();

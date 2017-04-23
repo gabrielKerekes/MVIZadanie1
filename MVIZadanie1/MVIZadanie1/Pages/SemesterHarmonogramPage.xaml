@@ -9,22 +9,14 @@
         <ListView
             x:Name="SemesterHarmonogramListView"
             IsPullToRefreshEnabled="True"
-            Refreshing="SemesterHarmonogramListView_OnRefreshing"
-            ItemTapped="SemesterHarmonogramListView_OnItemTapped"
             RowHeight="60">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <!-- todo: spravit pekne -->
                         <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="10">
-                            <!-- todo: ked tak dat obrazok podla kategories -->
-                            <!-- <Image Aspect="AspectFit" HeightRequest="120" WidthRequest="120"
-                                   Source="{Binding ImageSource}" /> -->
-                            <!--<StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical">-->
                                 <Label Text="{Binding Name}" FontSize="18" />
                                 <Label Text="{Binding Date}" FontSize="14" />
                                 <Label Text="{Binding Category}" FontSize="14" />
-                            <!--</StackLayout>-->
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

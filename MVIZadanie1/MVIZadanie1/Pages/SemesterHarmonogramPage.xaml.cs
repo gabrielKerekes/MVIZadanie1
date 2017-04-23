@@ -34,15 +34,5 @@ namespace MVIZadanie1.Pages
 
             appeared = true;
         }
-
-        private void SemesterHarmonogramListView_OnRefreshing(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void SemesterHarmonogramListView_OnItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            
-        }
     }
 }

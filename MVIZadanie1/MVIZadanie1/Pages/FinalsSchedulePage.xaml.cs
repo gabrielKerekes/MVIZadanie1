@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using MVIZadanie1.Model;
@@ -7,7 +6,6 @@ using Xamarin.Forms;
 
 namespace MVIZadanie1.Pages
 {
-    // todo: nastavenie pripomienky
     public partial class FinalsSchedulePage
     {
         private bool appeared;
@@ -62,43 +60,21 @@ namespace MVIZadanie1.Pages
                                             || fe.SecondDate.ToLower().Contains(text)
                                             || fe.SecondTime.ToLower().Contains(text));
         }
-
-        // todo: tu skoncene
+        
         private void FinalsScheduleListView_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             var finalExam = (FinalExam) e.Item;
 
-            var firstStartDateJavaMilis = TryParseDate(finalExam.FirstDate);
+            var fixedFirstDate = FixDateString(finalExam.FirstDate);
+            Utils.CreateReminder(this, $"Skuska {finalExam.Subject}", $"Miestnosť {finalExam.FirstRoom}", fixedFirstDate, fixedFirstDate, "dd.M.yyyy");
 
-            if (firstStartDateJavaMilis != -1)
-            { 
-                DependencyService.Get<IReminderCreator>().CreateReminder($"Skuska {finalExam.Subject}", $"Miestnosť {finalExam.FirstRoom}", firstStartDateJavaMilis);
-                DisplayAlert("Vytvorené", "Vytvorené", "OK");
-            }
-            else
-                DisplayAlert("Zlý dátum", "Zlý dátum", "OK");
-
-            var secondStartDateJavaMilis = TryParseDate(finalExam.SecondDate);
-
-            if (secondStartDateJavaMilis != -1)
-                DependencyService.Get<IReminderCreator>().CreateReminder($"Skuska {finalExam.Subject}", $"Miestnosť {finalExam.SecondRoom}", secondStartDateJavaMilis);
-            else
-                DisplayAlert("Druhý Zlý dátum", "Druhý Zlý dátum", "OK");
+            var fixedSecondDate = FixDateString(finalExam.FirstDate);
+            Utils.CreateReminder(this, $"Skuska {finalExam.Subject}", $"Miestnosť {finalExam.SecondRoom}", fixedSecondDate, fixedSecondDate, "dd.M.yyyy");
         }
 
-        private long TryParseDate(string dateString)
+        private string FixDateString(string date)
         {
-            try
-            {
-                var date = DateTime.Parse(dateString);
-                return date.Subtract(new DateTime(1970, 1, 1)).Ticks;
-            }
-            catch (Exception e)
-            {
-                
-            }
-
-            return -1;
+            return date + "2017";
         }
     }
 }

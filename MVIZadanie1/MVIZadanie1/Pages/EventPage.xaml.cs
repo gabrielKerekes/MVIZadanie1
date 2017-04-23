@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MVIZadanie1.Model;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MVIZadanie1.Pages
 {
@@ -53,7 +48,9 @@ namespace MVIZadanie1.Pages
 
         private void EventListView_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
-            
+            var ev = (Event) e.Item;
+
+            Utils.CreateReminder(this, ev.Name, ev.Place, ev.StartDateString, ev.EndDateString);
         }
     }
 }

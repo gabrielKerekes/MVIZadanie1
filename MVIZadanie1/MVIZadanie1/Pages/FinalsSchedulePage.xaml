@@ -19,7 +19,6 @@
                             <Label Text="{Binding SubjectAndCodeAndDepartment}" FontSize="18" />
                             <Label Text="{Binding FirstTry}" FontSize="14" />
                             <Label Text="{Binding SecondTry}" FontSize="14" />
-                            <!--</StackLayout>-->
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

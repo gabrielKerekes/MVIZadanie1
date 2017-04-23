@@ -36,11 +36,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="ButtonGroupView.cs" />
+    <Compile Include="Elements\ButtonGroupView.cs" />
     <Compile Include="Elements\LinkLabel.cs" />
     <Compile Include="IReminderCreator.cs" />
     <Compile Include="Model\Article.cs" />
     <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\Source.cs" />
     <Compile Include="Model\Templates\TemplateDepartment.cs" />
     <Compile Include="Pages\ArticlesPage.xaml.cs">
       <DependentUpon>ArticlesPage.xaml</DependentUpon>
@@ -52,13 +53,16 @@
     <Compile Include="Pages\FinalsSchedulePage.xaml.cs">
       <DependentUpon>FinalsSchedulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GkWebClient.cs" />
+    <Compile Include="MviWebClient.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\OpeningHoursObject.cs" />
     <Compile Include="Pages\OpeningHoursPage.xaml.cs">
       <DependentUpon>OpeningHoursPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SourcesPage.xaml.cs">
+      <DependentUpon>SourcesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SplashScreenPage.xaml.cs">
       <DependentUpon>SplashScreenPage.xaml</DependentUpon>
@@ -79,6 +83,7 @@
     <Compile Include="Pages\TemplatesPage.xaml.cs">
       <DependentUpon>TemplatesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -165,14 +170,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\feiLogo.png" />
-    <EmbeddedResource Include="Images\mechatronikaLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Pages\EventPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\SourcesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\spojene.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

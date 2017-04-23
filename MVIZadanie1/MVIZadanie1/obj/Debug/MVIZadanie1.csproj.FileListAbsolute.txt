@@ -33,3 +33,6 @@ C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZad
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.Pages.SplashScreenPage.xaml.g.cs
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\MVIZadanie1.dll.config
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.Pages.EventPage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.Pages.SourcesPage.xaml.g.cs
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\obj\Debug\MVIZadanie1.dll.mdb
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1\bin\Debug\MVIZadanie1.dll.mdb

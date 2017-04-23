@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using MVIZadanie1.Elements;
 using MVIZadanie1.Model;
 using Xamarin.Forms;
 

@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MVIZadanie1
+﻿namespace MVIZadanie1
 {
-    // todo: rename
     public interface IReminderCreator
     {
-        void CreateReminder(string title, string description, long startJavaMilis);
+        void CreateReminder(string title, string description, long startDateUnixT, long endDateUnixT);
     }
 }

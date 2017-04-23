@@ -5,7 +5,6 @@ using HtmlAgilityPack;
 
 namespace MVIZadanie1.Model
 {
-    // todo: GABO - mergnut software categ a software
     public class SoftwareCategory
     {
         public string Name { get; set; }
@@ -15,20 +14,22 @@ namespace MVIZadanie1.Model
 
     public class Software
     {
+        private const string SoftwareUrl = "http://mechatronika.cool/noviny/softver-pre-studentov/";
+
         public string Name { get; set; }
         public string Url { get; set; }
-
-        public const string SoftwareUrl = "http://mechatronika.cool/noviny/softver-pre-studentov/";
-
-        // todo: GABO - refactor
+        
         public static List<SoftwareCategory> GetSoftwareCategories()
         {
-            var htmlString = GkWebClient.DoRequest(SoftwareUrl);
+            var htmlString = MviWebClient.DoRequest(SoftwareUrl);
 
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(htmlString);
 
             var topMenu = htmlDocument.GetElementbyId("top-menu");
+            if (topMenu == null)
+                return new List<SoftwareCategory>();
+
             var softwareLi = topMenu.Descendants("li").First(d => d.Attributes.Contains("class") && d.Attributes["class"].Value.Contains("current_page_item"));
             var softwareCategoriesUl = softwareLi.Descendants("ul").First();
             var softwareCategoryLinks = softwareCategoriesUl.Descendants("li").Select(d => d.Descendants("a").First());
@@ -52,12 +53,7 @@ namespace MVIZadanie1.Model
 
         public static List<Software> GetSoftwareCategorySoftware(string softwareCategoryUrl)
         {
-            var htmlString = GkWebClient.DoRequest(softwareCategoryUrl);
-
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(htmlString);
-
-            var entryContentDiv = htmlDocument.DocumentNode.Descendants("div").First(d => d.Attributes.Contains("class") && d.Attributes["class"].Value.Contains("entry-content"));
+            var entryContentDiv = MviWebClient.GetPageEntryContent(softwareCategoryUrl);
 
             var softwareList = new List<Software>();
             var softwareStrings = entryContentDiv.InnerText.Trim().Split('\n');

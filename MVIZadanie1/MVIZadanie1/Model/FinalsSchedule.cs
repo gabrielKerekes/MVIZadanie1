@@ -27,7 +27,7 @@ namespace MVIZadanie1.Model
         
         public static IEnumerable<FinalExam> GetFinalsSchedule()
         {
-            var fileContent = GkWebClient.GetFileContent(FinalsScheduleFileUrl);
+            var fileContent = MviWebClient.GetFileContent(FinalsScheduleFileUrl);
             fileContent = fileContent.Replace("\r", "");
 
             var i = 0;

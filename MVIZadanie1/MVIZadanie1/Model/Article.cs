@@ -67,11 +67,15 @@ namespace MVIZadanie1.Model
             return $"{jsonContent.Substring(3, excerptLength)}...";
         }
 
-        public static IEnumerable<Article> GetArticlesFromWeb()
+        public static List<Article> GetArticlesFromWeb()
         {
-            var response = GkWebClient.DoRequest("http://mechatronika.cool/noviny/wp-json/wp/v2/posts");
+            var response = MviWebClient.DoRequest("http://mechatronika.cool/noviny/wp-json/wp/v2/posts");
 
             var root = JsonConvert.DeserializeObject<List<object>>(response);
+            if (root == null)
+                return new List<Article>();
+
+            var articleList = new List<Article>();
             foreach (var obj in root)
             {
                 var objectJson = obj.ToString();
@@ -100,13 +104,15 @@ namespace MVIZadanie1.Model
                 }
                 else
                 {
-                    var imageObjectJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(GkWebClient.DoRequest($"http://mechatronika.cool/noviny/wp-json/wp/v2/media/{featuredMedia}"));
+                    var imageObjectJson = JsonConvert.DeserializeObject<Dictionary<string, object>>(MviWebClient.DoRequest($"http://mechatronika.cool/noviny/wp-json/wp/v2/media/{featuredMedia}"));
                     var guidDict = JsonConvert.DeserializeObject<Dictionary<string, object>>(imageObjectJson["guid"].ToString());
                     imageUrl = guidDict["rendered"].ToString();
                 }
 
-                yield return new Article(title, htmlContent, excerpt, link, category, imageUrl);
+                articleList.Add(new Article(title, htmlContent, excerpt, link, category, imageUrl));
             }
+
+            return articleList;
         }
 
         public void ParseHtmlContent()
@@ -120,25 +126,32 @@ namespace MVIZadanie1.Model
             
             foreach (var paragraph in nodes.Where(n => n.Name == "p"))
             {
-                if (paragraph.ChildNodes.Any(n => n.Name == "iframe"))
+                try
                 {
-                    // todo: netreba nejaky error handling?
-                    var iframe = paragraph.ChildNodes.First(n => n.Name == "iframe");
-                    iframe.SetAttributeValue("width", "300");
-                    iframe.SetAttributeValue("height", "150");
-                    
-                    ArticleElements.Add(Tuple.Create(ArticleElementType.Video, iframe.OuterHtml));
+                    if (paragraph.ChildNodes.Any(n => n.Name == "iframe"))
+                    {
+                        // todo: netreba nejaky error handling?
+                        var iframe = paragraph.ChildNodes.First(n => n.Name == "iframe");
+                        iframe.SetAttributeValue("width", "300");
+                        iframe.SetAttributeValue("height", "150");
+
+                        ArticleElements.Add(Tuple.Create(ArticleElementType.Video, iframe.OuterHtml));
+                    }
+                    else if (paragraph.ChildNodes.Any(n => n.Name == "img"))
+                    {
+                        var imageUrl = paragraph.ChildNodes.First(n => n.Name == "img").GetAttributeValue("src", "");
+                        if (!string.IsNullOrWhiteSpace(imageUrl))
+                            ArticleElements.Add(Tuple.Create(ArticleElementType.Image, imageUrl));
+                    }
+                    else
+                    {
+                        ArticleElements.Add(Tuple.Create(ArticleElementType.Paragraph, paragraph.InnerHtml));
+                    }
                 }
-                else if (paragraph.ChildNodes.Any(n => n.Name == "img"))
+                catch (Exception)
                 {
-                    var imageUrl = paragraph.ChildNodes.First(n => n.Name == "img").GetAttributeValue("src", "");
-                    if (!string.IsNullOrWhiteSpace(imageUrl))
-                        ArticleElements.Add(Tuple.Create(ArticleElementType.Image, imageUrl));
+                    // don't care
                 }
-                else
-                {
-                    ArticleElements.Add(Tuple.Create(ArticleElementType.Paragraph, paragraph.InnerHtml));
-                }              
             }
 
             parsed = true;

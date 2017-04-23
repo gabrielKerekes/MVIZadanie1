@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MVIZadanie1.Model
 {
@@ -20,7 +17,9 @@ namespace MVIZadanie1.Model
 
         public static List<Event> GetAllEventsFromWeb()
         {
-            var eventsString = GkWebClient.DoRequest(EventApiUrl);
+            var eventsString = MviWebClient.DoRequest(EventApiUrl);
+            if (string.IsNullOrWhiteSpace(eventsString))
+                return new List<Event>();
 
             var eventsStringSplit = eventsString.Substring(1, eventsString.Length - 3).Split(';');
 

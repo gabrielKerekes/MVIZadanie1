@@ -44,10 +44,10 @@ C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Resources.ResourceManager.dll
-C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Diagnostics.Tools.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\HtmlAgilityPack.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Text.Encoding.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Net.Primitives.dll
+C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Diagnostics.Tools.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\Newtonsoft.Json.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Xml.XDocument.dll
 C:\Users\GabrielK\skola\mvi\MVIZadanie1\MVIZadanie1\MVIZadanie1.Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace MVIZadanie1
+namespace MVIZadanie1.Elements
 {
     public class ButtonGroupView : StackLayout
     {
@@ -21,17 +17,6 @@ namespace MVIZadanie1
             Init();
         }
 
-        public ButtonGroupView(List<Button> buttons)
-        {
-            this.buttons = buttons;
-            foreach (var button in buttons)
-            {
-                Children.Add(button);
-            }
-
-            Init();
-        }
-
         private void Init()
         {
             Orientation = StackOrientation.Vertical;
@@ -43,12 +28,6 @@ namespace MVIZadanie1
             Children.Add(button);
 
             DeactivateButton(button);
-        }
-
-        public void RemoveButton(Button button)
-        {
-            buttons.Remove(button);
-            Children.Remove(button);
         }
 
         public void SelectButton(Button button)
@@ -74,13 +53,11 @@ namespace MVIZadanie1
 
         private void ActivateButton(Button button)
         {
-            // todo: change color
             button.BackgroundColor = SelectedButtonColor;
         }
 
         private void DeactivateButton(Button button)
         {
-            // todo: change color
             button.BackgroundColor = DefaultButtonColor;
         }
     }

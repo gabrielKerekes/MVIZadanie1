@@ -24,8 +24,7 @@ namespace MVIZadanie1.Pages
             {
                 var elementType = articleElement.Item1;
                 var elementString = articleElement.Item2;
-
-                // todo: refactor
+                
                 switch (elementType)
                 {
                     case ArticleElementType.Video:
@@ -59,27 +58,8 @@ namespace MVIZadanie1.Pages
 
                         MainStackLayout.Children.Add(lineLabel);
                         break;
-
-                    default:
-                        // todo: error or smth
-                        break;
                 }
             }
-
-            // todo: remove if not needed
-            // todo: refactor .. aj Article.cs
-            //foreach (var line in article.TextLines)
-            //{
-            //}
-
-            //foreach (var imageUrl in article.ImageUrls)
-            //{
-            //}
-
-            //// todo: skusit dat spinner pri nacitavani
-            //foreach (var videoUrl in article.VideoUrls)
-            //{
-            //}
 
             var backButton = new Button
             {

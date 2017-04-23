@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MVIZadanie1.Pages.SingleArticlePage">
-    <StackLayout
-        x:Name="MainStackLayout"
-        Orientation="Vertical"
+             x:Class="MVIZadanie1.Pages.SourcesPage">
+    <WebView
+        x:Name="SourcesWebView"
         HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand" 
-        Padding="10">
-    </StackLayout>
+        VerticalOptions="FillAndExpand" />
 </ContentPage>

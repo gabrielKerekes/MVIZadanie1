@@ -9,36 +9,27 @@ namespace MVIZadanie1.Pages
         {
             InitializeComponent();
 
-            var feiLogoImage = new Image
+            var logoImage = new Image
             {
                 Aspect = Aspect.AspectFit,
-                HeightRequest = 150,
-                VerticalOptions = LayoutOptions.End,
+                HeightRequest = 300,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
-                Source = ImageSource.FromResource("MVIZadanie1.Images.feiLogo.png")
+                Source = ImageSource.FromResource("MVIZadanie1.Images.spojene.png")
             };
 
-            var mechatronicsLogoImage = new Image
-            {
-                Aspect = Aspect.AspectFit,
-                HeightRequest = 50,
-                VerticalOptions = LayoutOptions.End,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                Source = ImageSource.FromResource("MVIZadanie1.Images.mechatronikaLogo.png")
-            };
-
-            MainStackLayout.Children.Add(feiLogoImage);
-            MainStackLayout.Children.Add(mechatronicsLogoImage);
+            MainStackLayout.Children.Add(logoImage);
 
             WaitAndRedirect();
         }
-
-        // todo: zfunkcnit
+        
         private async void WaitAndRedirect()
         {
-            //await Task.Delay(5000);
+            var page = new MainPage();
 
-            await Navigation.PushModalAsync(new MainPage());
+            await Task.Delay(2500);
+
+            await Navigation.PushModalAsync(page);
         }
     }
 }
